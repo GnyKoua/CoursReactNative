@@ -1,12 +1,9 @@
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { MyNavigation } from './navigation/navigation';
+import AppForReact from './components/react/App-for-react';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <MyNavigation />
-    </NavigationContainer>
+    <AppForReact />
   );
 }
 
