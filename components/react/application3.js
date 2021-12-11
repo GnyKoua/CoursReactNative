@@ -6,6 +6,9 @@ function Etudiant3(props) {
     const [date, setDate] = useState(new Date());
 
     const Regenerer = () => {
+        // setMoyenne(Math.round(Math.random() * 20));
+
+
         setMoyenne(() => {
             let newMoyenne = Math.round(Math.random() * 20);
             if (newMoyenne <= 10) {
@@ -32,7 +35,7 @@ function Etudiant3(props) {
             <div>
                 <h1>Nom : {nom}</h1>
                 <h1>Moyenne : {moyenne}</h1>
-                <h1>Date : {date.toLocaleDateString()}</h1>
+                <h1>Date : {date.toGMTString()}</h1>
                 <button type="button" onClick={() => Regenerer()} >Régénérer</button>
             </div>
         );

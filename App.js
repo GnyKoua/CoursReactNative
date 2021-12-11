@@ -1,9 +1,11 @@
 import React from 'react';
-import AppForReact from './components/react/App-for-react';
+import AppForReactNative from './components/react-native/App-for-react-native';
+// import AppForReact from './components/react/App-for-react';
 
 export default function App() {
   return (
-    <AppForReact />
+    // <AppForReact />
+    <AppForReactNative />
   );
 }
 
