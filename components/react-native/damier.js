@@ -11,13 +11,13 @@ const Damier = () => {
                     items.map((row) => {
                         if (row % 2 == 0) {
                             return (
-                                <View style={styles.row}>
+                                <View style={styles.row} key={row}>
                                     {
                                         items.map((column) => {
                                             if (column % 2 == 0) {
-                                                return <View style={styles.blackBox} />
+                                                return <View style={styles.blackBox} key={row + '' + column} />
                                             } else {
-                                                return <View style={styles.whiteBox} />
+                                                return <View style={styles.whiteBox} key={row + '' + column} />
                                             }
                                         })
                                     }
@@ -25,13 +25,13 @@ const Damier = () => {
                             );
                         } else {
                             return (
-                                <View style={styles.row}>
+                                <View style={styles.row} key={row}>
                                     {
                                         items.map((column) => {
                                             if (column % 2 == 1) {
-                                                return <View style={styles.blackBox} />
+                                                return <View style={styles.blackBox} key={row + '' + column} />
                                             } else {
-                                                return <View style={styles.whiteBox} />
+                                                return <View style={styles.whiteBox} key={row + '' + column} />
                                             }
                                         })
                                     }

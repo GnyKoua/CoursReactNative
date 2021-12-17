@@ -16,7 +16,7 @@ export default function AppForReactNative() {
       // backgroundColor: "red"
     }}>
       <View style={{
-        flex: 0.33,
+        flex: 0.8,
         // backgroundColor: "green"
       }}>
         <Damier />

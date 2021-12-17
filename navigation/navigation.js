@@ -1,0 +1,18 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
+import { Home } from "../components/react-native/home";
+import { Screen1 } from "../components/react-native/screen1";
+import { Screen2 } from "../components/react-native/screen2";
+
+const Stack = createNativeStackNavigator();
+
+export const MyNavigation = () => {
+    return (
+        <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Screen1" component={Screen1} />
+            <Stack.Screen name="Screen2" component={Screen2} />
+        </Stack.Navigator>
+    );
+}
+
