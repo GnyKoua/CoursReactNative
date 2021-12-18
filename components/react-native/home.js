@@ -5,12 +5,24 @@ export const Home = ({ navigation, route }) => {
     return (
         <View>
             <Text>Home page</Text>
-            <Button title="Go to screen 1"
-                onPress={
-                    () => navigation.navigate("Screen1", {
-                        nom: "Mozart"
-                    })
-                } />
+            <View style={{
+                paddingTop: 10
+            }}>
+                <Button title="Go to screen 1"
+                    onPress={
+                        () => navigation.navigate("Screen1", {
+                            nom: "Mozart"
+                        })
+                    } />
+            </View>
+            <View style={{
+                paddingTop: 10
+            }}>
+                <Button title="Go to Image zoom"
+                    onPress={
+                        () => navigation.navigate("Animation")
+                    } />
+            </View>
         </View>
     );
 }
