@@ -23,6 +23,14 @@ export const Home = ({ navigation, route }) => {
                         () => navigation.navigate("Animation")
                     } />
             </View>
+            <View style={{
+                paddingTop: 10
+            }}>
+                <Button title="Go to Application 11"
+                    onPress={
+                        () => navigation.navigate("Application11")
+                    } />
+            </View>
         </View>
     );
 }

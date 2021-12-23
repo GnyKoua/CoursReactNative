@@ -1,35 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Damier from './damier';
+import { MyNavigation2 } from '../../navigation/navigation2';
+
 
 export default function AppForReactNative() {
   return (
-    // <View style={styles.container}>
-    //   <Text>Open up App.js to start working on your app!</Text>
-    //   <StatusBar style="auto" />
+    <NavigationContainer>
+      <MyNavigation2 />
+    </NavigationContainer>
+
+    // <View style={{
+    //   flex: 1,
+    //   flexDirection: "row",
+    //   justifyContent: "center"
+    // }}>
+    //   <View style={{
+    //     flex: 0.8
+    //   }}>
+    //     <Damier />
+    //   </View>
     // </View>
-    <View style={{
-      flex: 1,
-      flexDirection: "row",
-      justifyContent: "center",
-      // backgroundColor: "red"
-    }}>
-      <View style={{
-        flex: 0.8,
-        // backgroundColor: "green"
-      }}>
-        <Damier />
-      </View>
-    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
