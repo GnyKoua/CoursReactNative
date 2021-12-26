@@ -1,7 +1,30 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Button } from 'react-native';
 
 export const Home = ({ navigation, route }) => {
+    const [datas, SetDatas] = useState("Vide");
+
+    useEffect(() => {
+
+    });
+
+    const getDatasFromGoogle = () => {
+        fetch("https://api.github.com/users")
+            .then(async res => {
+                SetDatas(res.text());
+                const resultat = await res.json();
+                console.log(resultat)
+                return (
+                    <Text>{datas}</Text>
+                );
+            }).catch(err => {
+                SetDatas(err.toString());
+                return (
+                    <Text>{datas}</Text>
+                );
+            });
+    }
+
     return (
         <View>
             <Text>Home page</Text>
@@ -22,6 +45,11 @@ export const Home = ({ navigation, route }) => {
                     onPress={
                         () => navigation.navigate("Animation")
                     } />
+            </View>
+            <View style={{
+                paddingTop: 10
+            }}>
+                {getDatasFromGoogle()}
             </View>
         </View>
     );
