@@ -13,7 +13,7 @@ export const Home = ({ navigation, route }) => {
             .then(async res => {
                 SetDatas(res.text());
                 const resultat = await res.json();
-                console.log(resultat)
+                console.log(resultat);
                 return (
                     <Text>{datas}</Text>
                 );
@@ -49,7 +49,11 @@ export const Home = ({ navigation, route }) => {
             <View style={{
                 paddingTop: 10
             }}>
-                {getDatasFromGoogle()}
+                {/* {getDatasFromGoogle()} */}
+                <Button title="Go to Application 11"
+                    onPress={
+                        () => navigation.navigate("Application11")
+                    } />
             </View>
         </View>
     );

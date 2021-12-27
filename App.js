@@ -1,19 +1,17 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
 import AppForReactNative from './components/react-native/App-for-react-native';
-import { MyNavigation } from './navigation/navigation';
-import { MyNavigation2 } from './navigation/navigation2';
+import configureStore from './redux/configureStore';
 // import AppForReact from './components/react/App-for-react';
+
+const store = configureStore();
 
 export default function App() {
   return (
-    // <AppForReact />
-    // <AppForReactNative />
-    <NavigationContainer>
-      {/* <MyNavigation /> */}
-
-      <MyNavigation2 />
-    </NavigationContainer>
+    <Provider store={store}>
+      {/* <AppForReact /> */}
+      <AppForReactNative />
+    </Provider>
   );
 }
 
