@@ -8,7 +8,7 @@ const countReducer = (state = initialState, action) => {
         case COUNTER_CHANGE:
             return {
                 ...state,
-                count: action.payload
+                count: action.value
             };
         default:
             return state;
